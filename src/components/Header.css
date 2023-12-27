@@ -1,0 +1,64 @@
+/* Header.css */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  .menu {
+    display: flex;
+  }
+  
+  .menu a {
+    margin-right: 15px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Media query for responsive design */
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px;
+    }
+  
+    .menu a {
+      margin-right: 0;
+      margin-bottom: 10px;
+      color: white;
+      text-decoration: none;
+    }
+  
+    .menu.show {
+      display: flex;
+    }
+  
+    .menu-icon {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 10px;
+      color: white;
+    }
+  
+    .menu-icon span {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      margin-bottom: 5px;
+    }
+  }
+  
