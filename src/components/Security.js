@@ -1,6 +1,7 @@
-// About.js
+// Security.js
 import React, { useState } from 'react';
 import axios from 'axios';
+
 
 const About = () => {
   const [message, setMessage] = useState('');
@@ -18,7 +19,7 @@ const About = () => {
 
   return (
     <div>
-      <h2>About</h2>
+      <h2>Security - Protecting Endpoint</h2>
       <button onClick={fetchData}>Click Here To Fetch Publicly avialable Data</button>
       <p>{message}</p>
     </div>
