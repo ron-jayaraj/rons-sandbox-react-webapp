@@ -19,6 +19,10 @@ const Home = () => {
         <Link to="/Security"> Protecting Api Endpoint</Link>
         </li>
          
+        <li className="rons-href">
+        <Link to="/UserProfile"> User End Point</Link>
+        </li>
+
       </ol>
 
     </div>
