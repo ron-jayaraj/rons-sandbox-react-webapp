@@ -10,6 +10,7 @@ import Home from './components/Home';
 import Security from './components/Security';
 import Intro from './components/Intro';
 import Callback from './components/Callback';
+import TokenHandler from './components/TokenHandler';
 
 
 import UserProfile from './components/UserProfile';
@@ -31,6 +32,8 @@ const App = () => {
         <Route path="/Security" element={<Security />} />
         <Route path="/UserProfile" element = {<UserProfile />} />
         <Route path="/callback" element = {<Callback />} />
+        <Route path="/tokenHandler" element = {<TokenHandler />} />
+
 
         </Routes>
      
@@ -39,9 +42,5 @@ const App = () => {
   );
 };
 
-const root = createRoot(document.getElementById('root'));
-root.render(
-  <App />
-);
 
 export default App;
