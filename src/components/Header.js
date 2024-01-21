@@ -20,6 +20,8 @@ const Header = () => {
         <Link to="/home" onClick={() => setMenuVisible(false)}>Home</Link>
         <Link to="/about" onClick={() => setMenuVisible(false)}>About</Link>
         <Link to="/contact" onClick={() => setMenuVisible(false)}>Contact</Link>
+        <Link to="/auth0Logout" onClick={() => setMenuVisible(false)}>Logout</Link>
+
       </div>
       <div className="menu-icon" onClick={toggleMenu}>
         <span></span>

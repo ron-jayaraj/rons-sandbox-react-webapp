@@ -47,8 +47,11 @@ const Callback = () => {
 
   return (
     <div>
-      <h2>callback 123 component</h2>
-      <p>Callback Called yes</p>
+      <h2>Now you are loggd in. Auth0 would promot or not promot the log in screen. It could
+        use many different parameters to identify it is you...so no need to dig into that in our coding perspective...
+
+      </h2>
+      <p></p>
     </div>
   );
 };

@@ -1,9 +1,11 @@
 // UserProfile.js
 import { useEffect, useRef} from 'react';
 import axios from 'axios';
+import Auth0Login from './Auth0Login';
 
 const UserProfile = () => {
 
+  alert(" userprofile is called")
 //const[data, setData] = useState(null);
 //const[error,setError]= useState(null);
 const fetchDataRef = useRef();

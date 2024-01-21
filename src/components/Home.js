@@ -23,6 +23,10 @@ const Home = () => {
         <Link to="/UserProfile"> User End Point</Link>
         </li>
 
+        <li className="rons-href">
+        <Link to="/Auth0Logout"> Log out </Link>
+        </li>
+
       </ol>
 
     </div>

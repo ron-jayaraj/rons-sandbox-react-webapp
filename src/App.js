@@ -11,6 +11,8 @@ import Security from './components/Security';
 import Intro from './components/Intro';
 import Callback from './components/Callback';
 import TokenHandler from './components/TokenHandler';
+import Auth0Logout from './components/Auth0Logout';
+import Auth0LogoutHandler from './components/Auth0LogoutHandler';
 
 
 import UserProfile from './components/UserProfile';
@@ -33,6 +35,8 @@ const App = () => {
         <Route path="/UserProfile" element = {<UserProfile />} />
         <Route path="/callback" element = {<Callback />} />
         <Route path="/tokenHandler" element = {<TokenHandler />} />
+        <Route path="/Auth0Logout" element = {<Auth0Logout />} />
+        <Route path="/Auth0LogoutHandler" element = {<Auth0LogoutHandler/>} />
 
 
         </Routes>

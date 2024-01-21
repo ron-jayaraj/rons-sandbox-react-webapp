@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const About = () => {
+  alert("about is called ")
   const [message, setMessage] = useState('');
 
   const fetchData = async () => {
