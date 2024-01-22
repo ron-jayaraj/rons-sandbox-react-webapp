@@ -48,7 +48,12 @@ const Auth0LoginHandler = () => {
   return (
     <div>
       <h2>Now you are loggd in. Auth0 would prompt or not prompt the log in screen. It could
-        use many different parameters to identify it is you...so no need to dig into that in our coding perspective...
+        use many different parameters to identify it is you...
+        so no need to dig into that in our coding perspective...
+
+        <br></br>
+        The request was redirected to autho and autho called back this handler... where we got the authCode
+        using the auth code we exchanged for token and it returned access token and id token ...
 
       </h2>
       <p></p>
