@@ -5,9 +5,6 @@ import Auth0Login from './Auth0Login';
 
 const UserProfile = () => {
 
-  alert(" userprofile is called")
-//const[data, setData] = useState(null);
-//const[error,setError]= useState(null);
 const fetchDataRef = useRef();
 
 useEffect(() => {
@@ -20,15 +17,10 @@ useEffect(() => {
         return <div> data</div>
 
       }else{
-         const auth0LoginUrl = `https://dev-4bybm7c6skkix2ug.us.auth0.com/authorize?scope=openid%20profile%20email&audience=https://quickstarts/api&client_id=OQjNwhGDGSWRqzN5e4uwuFopIpBMUFzd&response_type=code&redirect_uri=http://localhost:3000/callback`;
-        window.location.href = auth0LoginUrl;
-      }
-  
-     // setData(response);
-
+        Auth0Login();
+          }
 
     } catch (error) {
-     // setError(error);
       return <div> some unknown error </div>
     
     }
