@@ -10,7 +10,6 @@ import Security from './components/Security';
 import Intro from './components/Intro';
 import Auth0LoginHandler from './components/Auth0LoginHandler';
 import Auth0Logout from './components/Auth0Logout';
-import Auth0LogoutHandler from './components/Auth0LogoutHandler';
 
 
 import UserProfile from './components/UserProfile';
@@ -31,7 +30,6 @@ const App = () => {
         <Route path="/Security" element={<Security />} />
         <Route path="/UserProfile" element = {<UserProfile />} />
         <Route path="/Auth0Logout" element = {<Auth0Logout />} />
-        <Route path="/Auth0LogoutHandler" element = {<Auth0LogoutHandler/>} />
         <Route path="/Auth0LoginHandler" element = {<Auth0LoginHandler/>} />
 
         </Routes>
