@@ -1,5 +1,6 @@
 // Auth0LoginHandler.js
 import React, { useEffect } from 'react';
+import axios from 'axios';
 
 const Auth0LoginHandler = () => {
 
@@ -13,31 +14,49 @@ const Auth0LoginHandler = () => {
     };
 
     const exchangeToken = async (authCode) => {
-      const clientId='OQjNwhGDGSWRqzN5e4uwuFopIpBMUFzd';
-      const clientSecret ='9A_xe8wtuJIPt3CkutCNRiz7RrTHUskJdNGRKYQIjYD2Es3crU9xgE60IN0J6NdJ';
-      const redirect_uri='http://localhost:3000/home'
+
+    
       try {
-        const response =await fetch('https://dev-4bybm7c6skkix2ug.us.auth0.com/oauth/token',{
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: new URLSearchParams({
-            grant_type: 'authorization_code',
-            code: authCode,
-            client_id: clientId,
-            client_secret: clientSecret,
-            redirect_uri: redirect_uri,   //it is asking for it but i dont think rediect happens ...
-          }),
-        });
-        const data =await response.json();
-        console.log('Token exchange response :',data);
-        alert(data);
-       // const idToken =data.id_token;
+        const clientId='OQjNwhGDGSWRqzN5e4uwuFopIpBMUFzd';
+        const clientSecret ='9A_xe8wtuJIPt3CkutCNRiz7RrTHUskJdNGRKYQIjYD2Es3crU9xgE60IN0J6NdJ';
+        const auth0Url='https://dev-4bybm7c6skkix2ug.us.auth0.com/oauth/token';
+        const audience='https://quickstarts/api';
+        //const grantType='client_credentials';
+        const grantType = 'authorization_code';
+        const redirect_uri='http://localhost:3000/home'
+
+
+      const response=  await axios.post(auth0Url,{
+        client_id: clientId,
+        client_secret: clientSecret,
+        audience: audience,
+        grant_type: grantType,
+        code: authCode,
+        redirect_uri: redirect_uri,
+      }
+      );
+   
+      alert (' why this hell not showing up 1');
+
+            alert (' why this hell not showing up 2');
+            const data =await response.data;
+
+      const accessToken =data.access_token;
+
+      const idToken =data.id_token;
+      alert(accessToken);
+      alert(idToken);
+     
+     localStorage.setItem("idToken",idToken);
+
+     alert("after adding access token to the local store trying to see "+localStorage.getItem("accessToken"));
+
+
+
 
       }catch(error){
+
         return <div> user could alreays exist</div>
-        console.error('Token exchnage error',error);
       }
      };
 
@@ -46,7 +65,10 @@ const Auth0LoginHandler = () => {
      if(authCode){
       alert("exchange token.. ...")
 
-      exchangeToken(authCode);
+      const response =exchangeToken(authCode);
+
+    
+      
      }
   }, []);
 
