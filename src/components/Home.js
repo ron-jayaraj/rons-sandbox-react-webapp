@@ -24,6 +24,10 @@ const Home = () => {
         </li>
 
         <li className="rons-href">
+        <Link to="/PubSubPublisher"> PubSub Publish Test </Link>
+        </li>
+
+        <li className="rons-href">
         <Link to="/Auth0Logout"> Log out </Link>
         </li>
 
