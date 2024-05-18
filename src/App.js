@@ -14,6 +14,7 @@ import Auth0Logout from './components/Auth0Logout';
 
 import UserProfile from './components/UserProfile';
 import PubSubPublisher from './components/PubSubPublisher';
+import PubSubReceiver from './components/PubSubReceiver';
 
 
 const App = () => {
@@ -32,7 +33,7 @@ const App = () => {
         <Route path="/Security" element={<Security />} />
         <Route path="/UserProfile" element = {<UserProfile />} />
         <Route path="/PubSubPublisher" element = {<PubSubPublisher />} />
-
+        <Route path="/PubSubReceiver" element = {<PubSubReceiver />} />
         <Route path="/Auth0Logout" element = {<Auth0Logout />} />
         <Route path="/Auth0LoginHandler" element = {<Auth0LoginHandler/>} />
 

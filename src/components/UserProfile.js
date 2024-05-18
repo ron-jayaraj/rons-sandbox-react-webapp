@@ -68,7 +68,7 @@ const UserProfile =   () => {
     alert('user has not logged in ask user to log in');
     Auth0Login();
   }
-  return <div>Good you have logged in. Here is your email got from autho. <br></br>
+  return <div>Good you have logged in. Here is your email got from autho. (if email does not show up try new private/incongnito window) <br></br>
   <pre>{jsonDataRef.current}</pre>
    </div>
 
